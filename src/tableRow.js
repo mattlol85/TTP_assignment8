@@ -1,4 +1,5 @@
 import React from "react";
+import TableCell from "./tableCell";
 
 export default function TableRow(props){
 
@@ -10,10 +11,22 @@ export default function TableRow(props){
         }
         return arr
     }
+
+    const calCell = () => {
+        let colArr = []
+        for(let i = 0; i<props.cells; i++){
+            colArr.push("these")
+        }
+        return colArr.map(elm => <td>{elm}</td>)
+    }
     displayRows()
     return(
-        <div>
-            {arr.map(elm => <tr>{elm}</tr>)}
+        <div id={"tablerow"}>
+            {arr.map(elm => {
+                return(<tr>{elm}
+                    {calCell()}
+                    </tr>)
+            })}
         </div>
 
     )
