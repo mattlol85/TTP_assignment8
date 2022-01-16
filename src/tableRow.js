@@ -7,7 +7,7 @@ export default function TableRow(props){
     let arr = []
     const displayRows = () => {
         for(let i = 0; i<rows;i++){
-            arr.push("that")
+            arr.push("row")
         }
         return arr
     }
@@ -15,7 +15,7 @@ export default function TableRow(props){
     const calCell = () => {
         let colArr = []
         for(let i = 0; i<props.cells; i++){
-            colArr.push("these")
+            colArr.push("col")
         }
         return colArr.map(elm => <td>{elm}</td>)
     }
