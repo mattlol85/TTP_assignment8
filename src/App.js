@@ -25,6 +25,12 @@ function App() {
           <button onClick={() => addRow()}>Add row</button>
           <button onClick={() => addCells()}>Add column</button>
           <button onClick={() => clear()}>Clear Grid</button>
+          <select id={"selection"}>
+            <option value={"blue"}>Blue</option>
+            <option value={"red"}>Red</option>
+            <option value={"green"}>Green</option>
+            <option value={"yellow"}>Yellow</option>
+          </select>
             <div>
               <Table rows={rows} cells={cells}/>
             </div>
