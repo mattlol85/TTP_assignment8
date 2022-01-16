@@ -6,7 +6,7 @@ import Table from "./table";
 function App() {
   const [color, setColor] = useState("transparent")
   const[rows, setRows] = useState(1)
-  const [cells, setCells] = useState(1)
+  const [cells, setCells] = useState(0)
 
   function addRow(){
     setRows(rows+1)

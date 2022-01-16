@@ -12,4 +12,11 @@ code {
     monospace;
 }
 
+.table {
+  border: solid black;
+  padding: 20px;
+}
 
+tbody{
+  border-collapse: collapse;
+}
