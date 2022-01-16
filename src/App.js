@@ -15,10 +15,16 @@ function App() {
   function addCells(){
     setCells(cells + 1)
   }
+
+  function clear(){
+    setCells(0)
+    setRows(1)
+  }
   return(
       <div>
           <button onClick={() => addRow()}>Add row</button>
           <button onClick={() => addCells()}>Add column</button>
+          <button onClick={() => clear()}>Clear Grid</button>
             <div>
               <Table rows={rows} cells={cells}/>
             </div>
