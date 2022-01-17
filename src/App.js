@@ -19,10 +19,11 @@ function App() {
   function clear(){
     setCells(0)
     setRows(1)
+    setColor("transparent")
   }
 
-  function clrChange(){
-
+  function clrChange(ev){
+      setColor(ev.target.value)
   }
 
   return(
@@ -30,14 +31,15 @@ function App() {
           <button onClick={() => addRow()}>Add row</button>
           <button onClick={() => addCells()}>Add column</button>
           <button onClick={() => clear()}>Clear Grid</button>
-          <select id={"selection"}>
+          <select id={"selection"} onChange={clrChange}>
+            <option value={"transparent"}>None</option>
             <option value={"blue"}>Blue</option>
             <option value={"red"}>Red</option>
             <option value={"green"}>Green</option>
             <option value={"yellow"}>Yellow</option>
           </select>
             <div>
-              <Table rows={rows} cells={cells} cellColor={color}/>
+              <Table rows={rows} cells={cells} color={color}/>
             </div>
       </div>
   )

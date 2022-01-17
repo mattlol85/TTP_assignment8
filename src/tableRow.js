@@ -11,13 +11,12 @@ export default function TableRow(props){
         }
         return arr
     }
-
     displayRows()
     return(
         <div id={"tablerow"}>
             {arr.map(elm => {
-                return(<tr>{elm}
-                    <TableCell cells={props.cells}/>
+                return(<tr >{elm}
+                    <TableCell cells={props.cells} color={props.color}/>
                     </tr>)
             })}
         </div>

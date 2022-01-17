@@ -9,8 +9,9 @@ export default function TableCell(props){
         }
         return colArr.map(elm => <td onClick={cellClrChange}>{elm}</td>)
     }
+    console.log(props.color)
     function cellClrChange(ev){
-        ev.target.setAttribute("style","background-color: blue")
+        ev.target.setAttribute("style",`background-color: ${props.color}`)
     }
 
     return(
