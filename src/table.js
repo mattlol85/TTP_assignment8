@@ -9,8 +9,6 @@ export default function Table(props){
     }
 
     return(
-        <div className={"table"}>
-            {table}
-        </div>
+        <div className={"table"}>{table}</div>
     )
 }

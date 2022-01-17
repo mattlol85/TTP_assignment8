@@ -49,7 +49,7 @@ function App() {
             <option value={"green"}>Green</option>
             <option value={"yellow"}>Yellow</option>
           </select>
-          <button onClick={() => clearAll()}>Clear</button>
+          <button onClick={() => clearAll() }>Clear</button>
             <div>
               <Table rows={rows} cells={cells} color={color}/>
             </div>
