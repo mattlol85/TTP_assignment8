@@ -11,7 +11,7 @@ export default function TableRow(props){
         }
         return arr
     }
-    
+
     displayRows()
     return(
         <div id={"tablerow"}>
