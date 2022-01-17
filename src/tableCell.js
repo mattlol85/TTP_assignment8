@@ -12,7 +12,7 @@ export default function TableCell(props){
     }
 
     return(
-        <div className={"cell"} onClick={cellClrChange}></div>
+        <td className={"cell"} onClick={cellClrChange}></td>
 
     )
 }
