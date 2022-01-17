@@ -20,6 +20,11 @@ function App() {
     setCells(0)
     setRows(1)
   }
+
+  function clrChange(){
+
+  }
+
   return(
       <div>
           <button onClick={() => addRow()}>Add row</button>
@@ -32,7 +37,7 @@ function App() {
             <option value={"yellow"}>Yellow</option>
           </select>
             <div>
-              <Table rows={rows} cells={cells}/>
+              <Table rows={rows} cells={cells} cellColor={color}/>
             </div>
       </div>
   )
