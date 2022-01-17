@@ -8,7 +8,7 @@ export default function Table(props){
     }
     return(
         <div>
-            <table onClick={cellClrChange}>
+            <table>
                 <tbody>
                     <TableRow rows={props.rows} cells={props.cells}/>
                 </tbody>

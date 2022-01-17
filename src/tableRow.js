@@ -11,20 +11,13 @@ export default function TableRow(props){
         }
         return arr
     }
-
-    const calCell = () => {
-        let colArr = []
-        for(let i = 0; i<props.cells; i++){
-            colArr.push(<div className={"table"}></div>)
-        }
-        return colArr.map(elm => <td>{elm}</td>)
-    }
+    
     displayRows()
     return(
         <div id={"tablerow"}>
             {arr.map(elm => {
                 return(<tr>{elm}
-                    {calCell()}
+                    <TableCell cells={props.cells}/>
                     </tr>)
             })}
         </div>
