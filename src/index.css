@@ -15,5 +15,6 @@ code {
 .table {
   border: solid black;
   padding: 20px;
+  background-color: transparent;
 }
 
