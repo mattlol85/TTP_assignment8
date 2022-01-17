@@ -8,7 +8,7 @@ export default function Table(props){
         <div>
             <table>
                 <tbody>
-                    <TableRow rows={props.rows} cells={props.cells}/>
+                    <TableRow rows={props.rows} cells={props.cells} color={props.color}/>
                 </tbody>
             </table>
         </div>
