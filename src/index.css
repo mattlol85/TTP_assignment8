@@ -12,13 +12,24 @@ code {
     monospace;
 }
 
-.table {
+.cell{
   border: solid black;
   padding: 20px;
-  background-color: transparent;
+  width: 5px;
 }
 
-tr{
-  background-color: transparent;
+
+button{
+  padding: 15px
+
 }
+
+.tablerow{
+  display: flex;
+}
+
+
+
+
+
 

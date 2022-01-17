@@ -6,7 +6,7 @@ import Table from "./table";
 function App() {
   const [color, setColor] = useState("transparent")
   const[rows, setRows] = useState(1)
-  const [cells, setCells] = useState(0)
+  const [cells, setCells] = useState(1)
 
   function addRow(){
     setRows(rows+1)
@@ -16,32 +16,44 @@ function App() {
     setCells(cells + 1)
   }
 
-  function clear(){
-    setCells(0)
-    setRows(1)
-    setColor("transparent")
-  }
-
   function clrChange(ev){
       setColor(ev.target.value)
   }
 
+  function removeRow(){
+      setRows(prevState => prevState - 1)
+  }
+
+  function removeCells(){
+      setCells(prevState => prevState - 1)
+  }
+
+  function clearAll(){
+      setColor("transparent")
+      setCells(1)
+      setRows(1)
+  }
+
+
+
   return(
-      <div>
+      <>
           <button onClick={() => addRow()}>Add row</button>
           <button onClick={() => addCells()}>Add column</button>
-          <button onClick={() => clear()}>Clear Grid</button>
-          <select id={"selection"} onChange={clrChange}>
+          <button onClick={() => removeRow()}>Remove Row</button>
+          <button onClick={() => removeCells()}>Remove Column</button>
+          <select id={"selection"} onInput={clrChange}>
             <option value={"transparent"}>None</option>
             <option value={"blue"}>Blue</option>
             <option value={"red"}>Red</option>
             <option value={"green"}>Green</option>
             <option value={"yellow"}>Yellow</option>
           </select>
+          <button onClick={() => clearAll()}>Clear</button>
             <div>
               <Table rows={rows} cells={cells} color={color}/>
             </div>
-      </div>
+      </>
   )
 
 
