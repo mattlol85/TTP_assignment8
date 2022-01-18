@@ -21,6 +21,9 @@
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject"
   },
+  "overrides": {
+    "mini-css-extract-plugin": "2.4.5"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
