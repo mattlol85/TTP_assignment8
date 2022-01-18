@@ -34,7 +34,23 @@ function App() {
       setRows(1)
   }
 
+    function fillUncolored(ev){
+      let cells = document.getElementsByClassName("cell")
+      for(let i = 0; i < cells.length; i++){
+        if(cells[i].className === "transparent"){
+          cells[i].className = ev.target.value
+        }
+      }
+      return cells
+    }
 
+    function fillAll(ev){
+      let cells = document.getElementsByClassName("cell")
+      for(let i = 0; i < cells.length; i++){
+          cells[i].className = ev.target.value
+      }
+      return cells
+    }
 
   return(
       <>
@@ -42,6 +58,8 @@ function App() {
           <button onClick={() => addCells()}>Add column</button>
           <button onClick={() => removeRow()}>Remove Row</button>
           <button onClick={() => removeCells()}>Remove Column</button>
+          <button onClick={() => fillUncolored()}>Fill all uncolored cells</button>
+          <button onClick={() => fillAll()}>Fill all cells</button>
           <select id={"selection"} onInput={clrChange}>
             <option value={"transparent"}>None</option>
             <option value={"blue"}>Blue</option>
